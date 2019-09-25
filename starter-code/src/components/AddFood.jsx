@@ -3,39 +3,7 @@ import React, { Component } from "react";
 class AddFood extends Component {
   constructor() {
     super();
-    this.state = {
-      name: "José",
-      age: 26,
-      profession: "Lead Teacher at Ironhack Lisbon",
-      reportsTo: "",
-      teamMembers: [
-        { id: "alvaro", name: "Álvaro" },
-        { id: "goncalo", name: "Gonçalo" },
-        { id: "carmen", name: "Carmen" }
-      ]
-    };
-    this.handleNameChange = this.handleNameChange.bind(this);
-    this.handleAgeChange = this.handleAgeChange.bind(this);
-    this.handleProfessionChange = this.handleProfessionChange.bind(this);
-    this.handleManagerChange = this.handleManagerChange.bind(this);
-  }
-
-  handleNameChange(event) {
-    this.setState({
-      name: event.target.value
-    });
-  }
-
-  handleAgeChange(event) {
-    this.setState({
-      age: event.target.valueAsNumber
-    });
-  }
-
-  handleProfessionChange(event) {
-    this.setState({
-      profession: event.target.value
-    });
+    this.state = {};
   }
 
   render() {
@@ -43,29 +11,14 @@ class AddFood extends Component {
     return (
       <div className="App">
         <form>
+          {/* add the image */}
           <div>
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              value={this.state.name}
-              onChange={this.handleNameChange}
-            />
+            <label htmlFor="title">Title</label>
+            <input type="text" />
           </div>
           <div>
-            <label htmlFor="age">Age</label>
-            <input
-              type="number"
-              value={this.state.age}
-              onChange={this.handleAgeChange}
-            />
-          </div>
-          <div>
-            <label htmlFor="profession">Profession</label>
-            <input
-              type="text"
-              value={this.state.profession}
-              onChange={this.handleProfessionChange}
-            />
+            <label htmlFor="calories">Calories</label>
+            <input type="number" />
           </div>
         </form>
       </div>
